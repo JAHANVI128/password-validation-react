@@ -23,3 +23,20 @@
 // }
 
 // export default App;
+
+import React, { useState } from 'react'
+
+export const PasswordInput = () => {
+
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+  return (
+    <div className='wrapper'>
+      <div className='field'>
+        <input type={showPassword ? 'text' : 'password'}/>
+      </div>
+    </div>
+  )
+}
+
