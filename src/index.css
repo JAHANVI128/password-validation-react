@@ -58,3 +58,83 @@ body{
   padding: 0 14px;
   border: 2px solid #2869d2;
 }
+
+.field i{
+  right: 18px;
+  top: 50%;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.wrapper .content{
+  margin: 20px 0 10px;
+}
+
+.content p {
+  color: #f12b2b;
+  font-size: 1.3rem;
+}
+
+.content .req-list{
+  margin-top: 20px;
+}
+
+.req-list li{
+  font-size: 1.3rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.req-list li i {
+  width: 20px;
+  font-size: 0.6rem;
+  color: #aaa;
+}
+
+.req-list li.valid li{
+  font-size: 1.2rem;
+  color: #4285F4;
+}
+
+.req-list li.valid span{
+  color: #999;
+}
+
+@media screen and (max-width: 500px) {
+  body, .wrapper{
+    padding: 15px;
+  }
+
+  .wrapper .field{
+    height: 55px;
+  }
+
+  .field input, .content p{
+    font-size: 1.15rem;
+  }
+
+  .field i, .req-list li{
+    font-size: 1.1rem;
+  }
+
+  .req-list li span{
+    margin-left: 7px;
+  }
+}
+
+button{
+  appearance: button;
+  width: 250px;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
