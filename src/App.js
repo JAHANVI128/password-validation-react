@@ -25,6 +25,7 @@
 // export default App;
 
 import React, { useEffect, useMemo, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 
 export const PasswordInput = () => {
 
@@ -65,8 +66,33 @@ export const PasswordInput = () => {
     setallRequirementsMet(allMet);
   }, [password,requirements]);
 
+  // const notify = () => {
+    // toast.success('Password set successfully', {
+    //   position: "top-center",
+    //   autoClose: 3000,
+    //   hideProgressBar: false,
+    //   closeOnClick: true,
+    //   pauseOnHover: true,
+    //   draggable: true,
+    //   progress: undefined,
+    //   theme: "dark",
+    //   });
+  // }
+
   return (
     <div className='wrapper'>
+      {/* <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      /> */}
       <div className='field'>
         <input type={showPassword ? 'text' : 'password'} placeholder='Create Password' value={password} onChange={handlePasswordChange}/>
         <i className={`fa-solid fa-eye${showPassword ? '-slash' : ''}`} onClick={tooglePasswordVisibility}></i>
@@ -88,7 +114,7 @@ export const PasswordInput = () => {
         </ul>
       </div>
       <div className='wrapper'>
-        <button disabled = {!allRequirementsMet}>Submit</button>
+        <button disabled = {!allRequirementsMet} onClick={toast}>Submit</button>
       </div>
     </div>
   );
